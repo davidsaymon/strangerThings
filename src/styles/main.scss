@@ -1,7 +1,17 @@
+// main.scss
 @use 'variaveis';
 @use 'hero';
 
-
+@font-face {
+    font-family: NetflixSans;
+    src: url(../../assets/fonts/NetflixSans-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: NetflixSans;
+    src: url(../../assets/fonts/NetflixSans-Bold.woff2);
+    font-weight: 700;
+}
 
 * {
     margin: 0;
@@ -9,13 +19,9 @@
     box-sizing: border-box;
 }
 
-$corDeFundo: #040714;
-$corTextoPrincipal: #b4b7c3;
-$corTextoSecundario: #f9f9f9;
-$corFundoBotao: #e50914;
-
 body {
     background-color: variaveis.$corDeFundo;
+    font-family: NetflixSans, sans-serif;
 }
 
 @mixin text($fontSize: 16px) {
@@ -26,12 +32,12 @@ body {
 
 @mixin title($fontSize: 30px) {
     @include text($fontSize);
-    color: variaveis.$corTextoSecundario
+    color: variaveis.$corTextoSecundario;
 }
 
 @mixin textFlix($fontSize: 16px) {
     font-size: $fontSize;
-    color: variaveis.$corTextoPrincipal
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text--big {
@@ -49,7 +55,7 @@ body {
 .link-text {
     @include text(18px);
     color: variaveis.$corTextoSecundario;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .title--big {
@@ -69,6 +75,5 @@ body {
 }
 
 .textFlix--small {
-    @include textFlix(14px)
+    @include textFlix(14px);
 }
-

@@ -1,5 +1,74 @@
-$bgcolor: rgb(29, 195, 229);
+@use 'variaveis';
+@use 'hero';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: #040714;
+$corTextoPrincipal: #b4b7c3;
+$corTextoSecundario: #f9f9f9;
+$corFundoBotao: #e50914;
 
 body {
-    background-color: $bgcolor;
+    background-color: variaveis.$corDeFundo;
 }
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoSecundario;
+}
+
+@mixin title($fontSize: 30px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario
+}
+
+@mixin textFlix($fontSize: 16px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(24px);
+}
+
+.textFlix {
+    @include textFlix;
+}
+
+.textFlix--small {
+    @include textFlix(14px)
+}
+

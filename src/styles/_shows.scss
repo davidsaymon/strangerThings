@@ -1,0 +1,66 @@
+@use 'variaveis';
+
+.shows {
+    padding: 2vw 5.6vw;
+    &__list {
+        margin-top: 44px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item{
+            display: flex; // Adicione flex para alinhar as imagens dentro do item, se necessário
+            justify-content: center; // Centraliza a imagem horizontalmente
+            align-items: center; // Centraliza a imagem verticalmente
+
+            img {
+                max-width: 100%;
+                width: 80%;
+                height: 400px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+
+            &--is-active {
+                border-color: variaveis.$corTextoSecundario;
+            }
+        }
+    }
+}
+
+
+.aviso {
+    padding: 25px 5vw;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+    width: 80%; // Ajusta o tamanho do iframe para ocupar toda a largura do seu contêiner
+    height: 315px; // Ajusta a altura conforme necessário
+    border-radius: 8px; // Adiciona bordas arredondadas aos vídeos, se desejado
+}
+

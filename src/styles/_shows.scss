@@ -8,6 +8,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media(max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active {
             display: grid;
         }
@@ -45,6 +49,8 @@
             }
         }
     }
+
+    
 }
 
 
@@ -63,4 +69,6 @@ iframe {
     height: 315px; // Ajusta a altura conforme necessário
     border-radius: 8px; // Adiciona bordas arredondadas aos vídeos, se desejado
 }
+
+
 

@@ -36,7 +36,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 1800px;
+            max-width: 100%;
             margin-top: 280px;
             padding:0 40px;
             width: 1300px;
@@ -69,6 +69,17 @@
                 background-color: variaveis.$corFundoBotao;
                 border-radius: 4px;
                 margin-left: 20px;
+                text-transform: uppercase;
+                border: none;
+                text-decoration: none;
+                padding: 8px 14px;
+                letter-spacing: 1px;
+                border: 1px solid variaveis.$corFundoBotao;
+                
+
+                &:hover {
+                    background-color: lighten(variaveis.$corFundoBotao, 5%);
+                }
             }
         }
     }

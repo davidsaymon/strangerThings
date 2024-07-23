@@ -2,7 +2,10 @@
 @use 'variaveis';
 @use 'hero';
 @use 'shows';
-@use 'watch-anywhere';
+@use 'available-devices';
+@use 'footer';
+@use 'header';
+
 
 @font-face {
     font-family: NetflixSans;
@@ -20,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: NetflixSans, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -79,4 +83,97 @@ body {
 
 .textFlix--small {
     @include textFlix(14px);
+}
+
+
+.image-text-section {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)), url(../images/wp8.jpg); /* Gradiente sobre a imagem */
+    min-height: 100vh;
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-position: 100%; /* Centraliza a imagem na hero section */
+    background-size: cover; /* Ajusta o tamanho da imagem para caber toda */
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    div {
+        padding: 0 4vw;
+        
+
+        h2 {
+            margin-bottom: 24px;
+            color: variaveis.$corFundoBotao;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+        }
+        
+    }
+}
+
+#onze {
+    
+    @media (max-width: 768px) {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.image-container {
+    width: 800px;
+    text-align: center;
+    margin-top: 24px;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    .mobile-image {
+        max-width: 100%;
+        border-radius: 8px;
+        display: block; /* Garante que a imagem seja um bloco */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+
+    .download {
+        display: block; /* Garante que o botão seja um bloco */
+        width: 45%; /* Faz com que o botão tenha a mesma largura da imagem */
+        max-width: 100%;
+        margin: 10px auto 0; /* Espaço entre a imagem e o botão, e centraliza o botão */
+        background-color: variaveis.$corFundoBotao;
+        border: variaveis.$corFundoBotao;;
+        border-radius: 4px;
+        height: 36px;
+        color:variaveis.$corTextoSecundario;
+
+        @media (max-width: 768px) {
+            height: 45px;
+            width: 70%;
+        }
+    }
+}
+
+#baixeAgora {
+    background: #000;
 }

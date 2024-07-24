@@ -23,7 +23,7 @@ Esta é uma solução para um projeto de site de streaming de "Stranger Things",
 ### Links
 
 - **URL da Solução**: [Código no Github](https://github.com/davidsaymon/strangerThings.git)
-- **URL do Site ao Vivo**: [Vercel](https://servidor-estatico.vercel.app/)
+- **URL do Site ao Vivo**: [Vercel](https://stranger-things-two.vercel.app/)
 
 ## Meu Processo
 
